@@ -56,6 +56,15 @@ const Pss = styled.div`
     font-size: 0.6rem;
   }
 `;
+const Pss2 = styled.div`
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #0d062d;
+  &.dark {
+    color: white;
+  }
+`;
 const Image = styled.div`
   height: 4rem;
   width: 4rem;
@@ -125,26 +134,26 @@ function OrderRow({
         <Modal.Open opens="invoice-name">
           <Cabin2 className="invoice">
             {invoice}
-            <Pss className={isDarkMode ? "dark" : ""}>view</Pss>
+            <Pss2 className={isDarkMode ? "dark" : ""}>view</Pss2>
           </Cabin2>
         </Modal.Open>
         <Modal.Window name="invoice-name">
           <Boxing download className={isDarkMode ? "dark" : ""}>
-            <Pss className={isDarkMode ? "dark" : ""}>Invoice #{id}</Pss>
+            <Pss2 className={isDarkMode ? "dark" : ""}>Invoice #{id}</Pss2>
 
             <InvoiceSth>
-              <Pss className={isDarkMode ? "dark" : ""}>Name:</Pss>{" "}
-              <Pss className={isDarkMode ? "dark" : ""}>{name}</Pss>
+              <Pss2 className={isDarkMode ? "dark" : ""}>Name:</Pss2>{" "}
+              <Pss2 className={isDarkMode ? "dark" : ""}>{name}</Pss2>
             </InvoiceSth>
             <InvoiceSth>
-              <Pss className={isDarkMode ? "dark" : ""}>Status:</Pss>
+              <Pss2 className={isDarkMode ? "dark" : ""}>Status:</Pss2>
               <Tag type={statusToTagName[status]}>
                 {status.replace("-", " ")}
               </Tag>
             </InvoiceSth>
             <InvoiceSth>
-              <Pss className={isDarkMode ? "dark" : ""}>Amount:</Pss>
-              <Pss className={isDarkMode ? "dark" : ""}>{amount}</Pss>
+              <Pss2 className={isDarkMode ? "dark" : ""}>Amount:</Pss2>
+              <Pss2 className={isDarkMode ? "dark" : ""}>{amount}</Pss2>
             </InvoiceSth>
           </Boxing>
         </Modal.Window>
